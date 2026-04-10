@@ -1,18 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { PostComponent } from 'src/post/post.component';
+import { PostFormComponent } from 'src/post-form/post-form.component';
+import { Router, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,    // ✅ OBBLIGATORIO
+    PostComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule,
+    FormsModule,ReactiveFormsModule// ✅ routing importato qui
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent     // ✅ OBBLIGATORIO
+  ]
 })
-export class AppModule { }
+export class AppModule {}
+``
