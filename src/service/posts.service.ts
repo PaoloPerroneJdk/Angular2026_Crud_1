@@ -18,4 +18,8 @@ export class PostsService {
   createPost(post:Posts): Observable<Posts[]> {
     return this.http.post<Posts[]>(this.apiUrl,post)
   }
+
+  getPostById(id: number): Observable<Posts>{
+    return this.http.get<Posts>(`${this.apiUrl}/${id}`)
+  }
 }

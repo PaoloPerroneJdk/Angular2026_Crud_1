@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Posts } from 'src/models/posts';
 import { PostsService } from 'src/service/posts.service';
 
@@ -10,7 +11,7 @@ import { PostsService } from 'src/service/posts.service';
 export class PostComponent {
  posts: Posts [] =[] ;
 
- constructor(private postService: PostsService){}
+ constructor(private postService: PostsService,private route: Router){}
 
  ngOnInit(): void {
   this.getPost()
@@ -25,5 +26,9 @@ export class PostComponent {
       console.log('post creato male',error)
       
   })
- }
+
+}
+employeeDetails(id: number){
+    this.route.navigate(['/post', id]);
+  }
 }

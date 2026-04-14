@@ -9,12 +9,14 @@ import { PostComponent } from 'src/post/post.component';
 import { PostFormComponent } from 'src/post-form/post-form.component';
 import { Router, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostShowComponent } from '../post-show/post-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,    // ✅ OBBLIGATORIO
     PostComponent,
-    PostFormComponent
+    PostFormComponent,
+    PostShowComponent
   ],
   imports: [
     BrowserModule,

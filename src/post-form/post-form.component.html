@@ -1,82 +1,54 @@
 <div class="container">
-  <h2 class="title">
-    {{ isEdit ? "Update a New Post" : "Create a Post" }}
-  </h2>
+    <h2 class="title">
+        {{ isEdit ? "Update a New Post" : "Create a Post" }}
+    </h2>
 
-  <div class="button-group">
-    <button [routerLink]="['/']" class="btn primary-btn">Home</button>
-    <button [routerLink]="['/posts']" class="btn secondary-btn">Posts</button>
-  </div>
-
-  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-    <!-- TITLE -->
-    <div class="form-group">
-      <div class="form-group">
-
-      <!-- <input
-        type="text"
-        formControlName="fullname"
-        class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f['title'].errors }"
-      />
-
-        <div *ngIf="submitted && f['title'].errors" class="invalid-feedback">
-        <div *ngIf="f['title'].errors['required']">Fullname is required</div>
-      </div> -->
-      <label for="title" class="form-label">First Name</label>
-    
- <input
-            id="title"
-            formControlName="title"
-            rows="5"
-            class="form-control"
-            [ngClass]="{
-              'is-invalid': submitted && postForm.get('title')?.errors,
-            }"
-      />
-
-          <div
-            *ngIf="
-              submitted && postForm.get('title')?.errors?.['required']
-            "
-            class="invalid-feedback"
-          >
-            Title is required
-          </div>
-       
-
-
-        <!-- DESCRIPTION -->
-        <div class="form-group">
-          <label for="description">Description:</label>
-
-          <textarea
-            id="description"
-            formControlName="description"
-            rows="5"
-            class="form-control"
-            [ngClass]="{
-              'is-invalid': submitted && postForm.get('description')?.errors,
-            }"
-          ></textarea>
-
-          <div
-            *ngIf="
-              submitted && postForm.get('description')?.errors?.['required']
-            "
-            class="invalid-feedback"
-          >
-            Description is required
-          </div>
-        </div>
-
-        <!-- BUTTON -->
-        <div class="form-btn-right">
-          <button class="btn secondary-btn" type="submit">
-            {{ isEdit ? "Update" : "Submit" }}
-          </button>
-        </div>
-      </div>
+    <div class="button-group">
+        <button [routerLink]="['/']" class="btn primary-btn">Home</button>
+        <button [routerLink]="['/posts']" class="btn secondary-btn">Posts</button>
     </div>
-  </form>
+
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <!-- TITLE -->
+        <div class="form-group">
+            <div class="form-group">
+
+                <label for="title" class="form-label">First Name</label>
+
+                <input id="title" formControlName="title" rows="5" class="form-control" [ngClass]="{
+              'is-invalid': submitted && postForm.get('title')?.errors,
+            }" />
+
+                <div *ngIf="
+              submitted && postForm.get('title')?.errors?.['required']
+            " class="invalid-feedback">
+                    Title is required
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+                <div class="form-group">
+                    <label for="description">Description:</label>
+
+                    <textarea id="description" formControlName="description" rows="5" class="form-control" [ngClass]="{
+              'is-invalid': submitted && postForm.get('description')?.errors,
+            }"></textarea>
+
+                    <div *ngIf="
+              submitted && postForm.get('description')?.errors?.['required']
+            " class="invalid-feedback">
+                        Description is required
+                    </div>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="form-btn-right">
+                    <button class="btn secondary-btn" type="submit">
+                        {{ isEdit ? "Update" : "Submit" }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

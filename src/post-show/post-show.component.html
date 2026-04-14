@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 class="title">{{ post?.title }}</h2>
+
+    <div class="button-group">
+      <button [routerLink]="['']" class="btn primary-btn">Home</button>
+      <button [routerLink]="['/post']" class="btn secondary-btn">Posts</button>
+      <button [routerLink]="['']" class="btn edit-btn">Edit</button>
+    </div>
+
+    <p class="description">
+      {{ post?.description }}
+    </p>
+  </div>
