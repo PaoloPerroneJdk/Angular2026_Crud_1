@@ -22,4 +22,12 @@ export class PostsService {
   getPostById(id: number): Observable<Posts>{
     return this.http.get<Posts>(`${this.apiUrl}/${id}`)
   }
+
+  updatePost(id:any,post:Posts): Observable<Posts> {
+    return this.http.put<Posts>(`${this.apiUrl}/${id}`,post)
+  }
+
+  deletePost(id: number): Observable<Posts>{
+    return this.http.delete<Posts>(`${this.apiUrl}/${id}`)
+  }
 }

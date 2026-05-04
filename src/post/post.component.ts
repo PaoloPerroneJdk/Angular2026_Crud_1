@@ -31,4 +31,17 @@ export class PostComponent {
 employeeDetails(id: number){
     this.route.navigate(['/post', id]);
   }
+
+ deletePost(id: number) {
+
+      this.postService.deletePost(id).subscribe({
+        next: () => {
+          this.posts = this.posts.filter(post => post.id != id);
+        }, 
+        error: (error) => {
+          console.log("Failed to delete", error);
+        }
+      })
+    
+  }
 }

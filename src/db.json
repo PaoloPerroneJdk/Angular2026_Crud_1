@@ -6,9 +6,9 @@
       "description": "Einstein emphasized the power of imagination in driving discovery and innovation. While knowledge is finite, imagination encircles the world and unlocks the limitless possibilities of what could be."
     },
     {
-      "id": "2",
-      "title": "Maya Angelou - 'You may not control all the events that happen to you, but you can decide not to be reduced by them.'",
-      "description": "Angelou reminds us that while life presents challenges beyond our control, we retain the power over our attitude and resilience. Strength comes not from avoiding adversity, but from refusing to let it diminish our spirit."
+      "title": "Paolo- 'You may not control all the events that happen to you, but you can decide not to be reduced by them.'",
+      "description": "Angelou reminds us that while life presents challenges beyond our control, we retain the power over our attitude and resilience. Strength comes not from avoiding adversity, but from refusing to let it diminish our spirit.",
+      "id": "2"
     },
     {
       "id": "3",
@@ -16,14 +16,15 @@
       "description": "Da Vinci believed that true mastery lies in making complex things appear simple. Whether in design, thought, or life, stripping away unnecessary complexity leads to clarity, elegance, and profound effectiveness."
     },
     {
-      "id": "4",
-      "title": "Rumi - 'The wound is the place where the light enters you.'",
-      "description": "This poetic reflection by Rumi teaches that our moments of pain and vulnerability often become opportunities for growth, wisdom, and transformation. It's through difficulty that we develop depth and resilience."
+      "title": "Il Fu Mattia Pascal",
+      "description": "Un Personaggio alla ricerca di se stesso",
+      "id": "mFmmgmwN3kY"
     },
     {
-      "id": "5",
-      "title": "Steve Jobs - 'Stay hungry, stay foolish.'",
-      "description": "Jobs encouraged continuous curiosity and the courage to take unconventional risks. 'Stay hungry' means never settling for mediocrity, while 'stay foolish' is a call to remain open to new ideas, unafraid to make mistakes in pursuit of meaningful goals."
+      "title": "Paolo- 'You may not control all the events that happen to you, but you can decide not to be reduced by them.'",
+      "description": "Angelou reminds us that while life presents challenges beyond our control, we retain the power over our attitude and resilience. Strength comes not from avoiding adversity, but from refusing to let it diminish our spirit.",
+      "id": "M9T4cUhzcZE"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

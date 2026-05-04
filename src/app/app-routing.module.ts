@@ -9,6 +9,9 @@ import { PostShowComponent } from 'src/post-show/post-show.component';
 const routes: Routes = [
  { path: '', component: PostComponent },
  { path: 'post/:id',component:PostShowComponent},
+ {
+    path: 'post/edit/:id', component: PostFormComponent,
+}, 
  { path: 'create', component:PostFormComponent} 
 ];
 

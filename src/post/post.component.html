@@ -21,18 +21,15 @@
                 <td>{{ post?.title }}</td>
                 <td>{{ post?.description }}</td>
                 <td class="button-row">
+                    <button [routerLink]="['/post', post.id]" class="btn btn-warning">
+                        Show
+                    </button>
 
-                    
-<button
-  [routerLink]="['/post', post.id]"
-  class="btn btn-warning"
->
-  Show
-</button>
+                    <button [routerLink]="['/post/edit', post.id]" class="btn btn btn-info">
+                        Edit
+                    </button>
 
-
-                    <button [routerLink]="['edit', post?.id]" class="btn btn btn-info">Edit</button>
-                    <button class="btn btn btn-danger">Delete</button>
+                    <button (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
                     <!-- AGGIUNGI IL METODO DELETE  -->
                 </td>
             </tr>
