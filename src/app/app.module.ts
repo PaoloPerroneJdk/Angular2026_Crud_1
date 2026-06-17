@@ -31,4 +31,3 @@ import { PostShowComponent } from '../post-show/post-show.component';
   ]
 })
 export class AppModule {}
-``
