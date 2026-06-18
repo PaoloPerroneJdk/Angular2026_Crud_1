@@ -18,7 +18,7 @@ pipeline {
             steps {
                 bat '''
                 cd C:\\xampp\\mysql\\bin
-                mysql -u root -e "SELECT * FROM mydb.posts;"
+                mysql -u root -e "SELECT * FROM mysql_jenkins.posts;"
                 '''
             }
         }
