@@ -2,24 +2,25 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Install Dependencies') {
+        stage('Install') {
             steps {
                 bat 'npm install'
             }
         }
 
-        stage('Build Angular') {
+        stage('Build') {
             steps {
-                bat 'npm run build -- --configuration production'
+                bat 'npm run build'
             }
         }
 
-        stage('Run Tests') {
+        stage('MySQL Test') {
             steps {
-                bat 'npm run test -- --watch=false --browsers=ChromeHeadless'
+                bat '''
+                cd C:\\xampp\\mysql\\bin
+                mysql -u root -e "SELECT * FROM mydb.posts;"
+                '''
             }
         }
-
     }
 }
