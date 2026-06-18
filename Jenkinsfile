@@ -14,6 +14,14 @@ pipeline {
             }
         }
 
+        
+        stage('Test') {
+        steps {
+        bat 'npm run test -- --watch=false --browsers=ChromeHeadless'
+            }
+    }
+
+
         stage('MySQL Test') {
             steps {
                 bat '''
